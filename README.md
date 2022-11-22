@@ -64,6 +64,17 @@ Now, we are going to use a single SAM deployment to deploy this, which will crea
 
 ![Architecture Diagram](img/img2.png)
 
+### Before starting this guide, you will need:
+
+- An AWS account (if you don't yet have one, please create one and set up your environment)
+- Basic understanding of Python
+- Following tools installed 
+    - [`awscli`](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+    - [`samcli`](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
+    - [`docker`](https://docs.docker.com/engine/install/rhel/)
+    - [`Postman`](https://www.postman.com/) (Optional, you can use any API client)
+
+
 ### Steps to deploy 
 
 1. Create a project directory:
@@ -97,15 +108,15 @@ $ sam deploy --guided
 
 ![Architecture Diagram](img/img4.png)
 
-7. Once the Application is deployed, keep a note of the API Gateway endpoint (we would need this at `Step 8` for inference)
+6. Once the Application is deployed, keep a note of the API Gateway endpoint (we would need this at `Step 8` for inference)
 
-6. Upload the ML model
+7. Upload the ML model
 
 ```
 $ aws s3 cp models.p s3://<THE BUCKET NAME YOU PROVIDED WHILE DEPLOYING THE SAM APPLICATION>
 ```
 
-7. Perform ML inference : Use POSTMAN or API GW UI for inference, use the following in the body 
+8. Perform ML inference : Use POSTMAN or API GW UI for inference, use the following in the body 
 
 ```
 {
