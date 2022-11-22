@@ -72,7 +72,7 @@ Now, we are going to use a single SAM deployment to deploy this, which will crea
     - [`awscli`](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
     - [`samcli`](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
     - [`docker`](https://docs.docker.com/engine/install/rhel/)
-    - [`Postman`](https://www.postman.com/) (Optional, you can use any API client)
+    - [`Postman`](https://www.postman.com/) (Optional, you can use any API client of your choice)
 
 
 ### Steps to deploy 
